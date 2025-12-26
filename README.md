@@ -38,7 +38,7 @@ Consulta informações de endereço usando a API pública ViaCEP com Python.
 ### [Locadora de Veículos](https://github.com/kelvinlemos7/locadora-veiculos)  
 Simula um sistema de locação de veículos utilizando modelagem relacional e comandos SQL.
 
-*(Veja mais projetos na seção [Projetos]())*  
+*(Veja mais projetos na seção [Projetos](https://kelvinlemosportfolio.netlify.app/pages/projetos))*  
 
 ---
 
@@ -48,7 +48,7 @@ No blog compartilho artigos, dicas e estudos sobre programação e tecnologia.
 
 - [5 sites que todo programador iniciante PRECISA conhecer](https://www.linkedin.com/feed/update/urn:li:activity:7399123253144825856/)  
 
-*(Mais artigos disponíveis na seção [Blog]())*  
+*(Mais artigos disponíveis na seção [Blog](https://kelvinlemosportfolio.netlify.app/pages/blog))*  
 
 ---
 
@@ -60,4 +60,4 @@ No blog compartilho artigos, dicas e estudos sobre programação e tecnologia.
 
 ---
 
-## 🌐 Link do site:
+## 🌐 Link do site: https://kelvinlemosportfolio.netlify.app/
