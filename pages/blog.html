@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kelvin Lemos | Blog</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Fonte e ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/icons/brain.png">
+</head>
+<body>
+
+    <!-- ================= HEADER / NAV ================= -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= BLOG / POSTS ================= -->
+    <section class="blog-section">
+        <h1 class="blog-title">Meu Blog</h1>
+        <p class="blog-desc">Aqui você encontra artigos, estudos e reflexões sobre programação e tecnologia.</p>
+
+        <div class="blog-cards">
+            <div class="blog-card">
+                <img src="../assets/images/prog.png" alt="Post 1">
+                <div class="blog-card-content">
+                    <h3>5 sites que todo programador iniciante PRECISA conhecer!</h3>
+                    <p>Descubra sites essenciais para aprender programação e acelerar seu aprendizado desde o primeiro dia.</p>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7399123253144825856/" class="btn btn-primary">Ler Post</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section class="contact">
+        <h2 class="section-title">Contato</h2>
+        <div class="logos-contact">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kelvinkauan17@gmail.com" target="_blank">
+                <i class="devicon-google-original" style="color:#8B5CF6; font-size:40px;"></i>
+            </a>
+            <a href="https://github.com/kelvinlemos7" target="_blank">
+                <i class="devicon-github-original" style="color:#8B5CF6; font-size:40px;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kelvinkauan/" target="_blank">
+                <i class="devicon-linkedin-plain" style="color:#8B5CF6; font-size:40px;"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <section class="footer-section">
+        <footer class="footer">
+            <p>© <span id="year"></span> Kelvin Lemos. Todos os direitos reservados.</p>
+            <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
+        </footer>
+    </section>
+
+    <!-- JS -->
+    <script src="../js/main.js"></script>
+
+</body>
+</html>

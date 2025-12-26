@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kelvin Lemos | Engenharia de Software</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Fonte e ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/icons/brain.png">
+</head>
+<body>
+
+    <!-- ================= HEADER / NAV ================= -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="pages/projetos.html">Projetos</a></li>
+                <li><a href="pages/blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= HERO / HOME ================= -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-intro">Olá, eu sou</p>
+                <h1 class="hero-name">Kelvin Lemos</h1>
+                <h2 class="hero-title">
+                    Desenvolvo soluções digitais <strong>simples</strong>,
+                    <strong>eficientes</strong> e <strong>bem estruturadas</strong>.
+                </h2>
+                <p class="hero-description">
+                    Transformo ideias em sistemas funcionais, com foco em lógica,
+                    performance e boas práticas de desenvolvimento.
+                </p>
+                <ul class="hero-highlights">
+                    <li>🧠 Foco em Back-end</li>
+                    <li>⚙️ Solução de Problemas</li>
+                    <li>🚀 Aprendizagem Contínua</li>
+                </ul>
+                <div class="hero-buttons">
+                    <a href="assets/cv/Kelvin-Lemos-CV.pdf" class="btn btn-primary" download>
+                        Baixar CV
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="role-badge">Engenheiro de Software</div>
+                <img src="assets/images/kelvin.jpeg" alt="Foto de Kelvin">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-carousel">
+            <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg" alt="HTML5">
+                <span>HTML5</span>
+                <small>Marcação</small>
+            </div>
+            <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg" alt="CSS3">
+                <span>CSS3</span>
+                <small>Estilo</small>
+            </div>
+            <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
+                <span>JavaScript</span>
+                <small>Linguagem</small>
+            </div>
+            <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                <span>Node.js</span>
+                <small>Runtime</small>
+            </div>
+            <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python">
+                <span>Python</span>
+                <small>Linguagem</small>
+            </div>
+            <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL">
+                <span>MySQL</span>
+                <small>Banco de Dados</small>
+            </div>
+            <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+                <span>Git</span>
+                <small>Versionamento</small>
+            </div>
+            <div class="skill-item">
+                <img src="assets/icons/api.png" alt="APIs">
+                <span>APIs</span>
+                <small>Integrações</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CTA PROJETOS ================= -->
+    <section class="cta-projects">
+        <h2>Quer ver meus projetos?</h2>
+        <p>Confira aplicações reais e estudos práticos desenvolvidos por mim.</p>
+        <a href="pages/projetos.html" class="btn btn-primary">
+            Acessar Projetos
+        </a>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section class="contact">
+        <h2 class="section-title">Contato</h2>
+        <div class="logos-contact">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kelvinkauan17@gmail.com&su=Assunto%20aqui&body=Mensagem%20aqui" target="_blank">
+                <i class="devicon-google-original" style="color:#8B5CF6; font-size:40px;"></i>
+            </a>
+            <a href="https://github.com/kelvinlemos7" target="_blank">
+                <i class="devicon-github-original" style="color:#8B5CF6; font-size:40px;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kelvinkauan/" target="_blank">
+                <i class="devicon-linkedin-plain" style="color:#8B5CF6; font-size:40px;"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <section class="footer-section">
+        <footer class="footer">
+            <p>© <span id="year"></span> Kelvin Lemos. Todos os direitos reservados.</p>
+            <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
+        </footer>
+    </section>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

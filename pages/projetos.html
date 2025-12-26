@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kelvin Lemos | Projetos</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Fonte e ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/icons/brain.png">
+</head>
+<body>
+
+    <!-- ================= HEADER / NAV ================= -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <section class="projects-blog-section">
+    <h1 class="projects-title">Meus Projetos</h1>
+    <p class="projects-desc">Aqui você encontra aplicações reais, estudos práticos e experimentos que desenvolvi.</p>
+
+    <div class="projects-blog-cards">
+        <div class="project-blog-card">
+            <img src="../assets/images/panela.png" alt="Projeto 1">
+            <div class="project-blog-card-content">
+                <h3>Panela de Ouro</h3>
+                <p>Sistema de pedidos de restaurante em Python via terminal, com seleção de pratos, cálculo do total e resumo final.</p>
+                <a href="https://github.com/kelvinlemos7/sistema-restaurante" class="btn btn-primary">Ver Projeto</a>
+            </div>
+        </div>
+
+        <div class="project-blog-card">
+            <img src="../assets/images/cep.png" alt="Projeto 2">
+            <div class="project-blog-card-content">
+                <h3>Consultar CEP</h3>
+                <p>Projeto criado em Python para consultar informações de endereço usando a API pública ViaCEP.</p>
+                <a href="https://github.com/kelvinlemos7/consultaCEP" class="btn btn-primary">Ver Projeto</a>
+            </div>
+        </div>
+
+        <div class="project-blog-card">
+            <img src="../assets/images/locadora.png" alt="Projeto 3">
+            <div class="project-blog-card-content">
+                <h3>Locadora de Veículos</h3>
+                <p>Este projeto simula um sistema de locação de veículos utilizando modelagem relacional e comandos SQL.</p>
+                <a href="https://github.com/kelvinlemos7/locadora-veiculos" class="btn btn-primary">Ver Projeto</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- ================= CONTATO ================= -->
+    <section class="contact">
+        <h2 class="section-title">Contato</h2>
+        <div class="logos-contact">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kelvinkauan17@gmail.com&su=Assunto%20aqui&body=Mensagem%20aqui" target="_blank">
+                <i class="devicon-google-original" style="color:#8B5CF6; font-size:40px;"></i>
+            </a>
+            <a href="https://github.com/kelvinlemos7" target="_blank">
+                <i class="devicon-github-original" style="color:#8B5CF6; font-size:40px;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kelvinkauan/" target="_blank">
+                <i class="devicon-linkedin-plain" style="color:#8B5CF6; font-size:40px;"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <section class="footer-section">
+        <footer class="footer">
+            <p>© <span id="year"></span> Kelvin Lemos. Todos os direitos reservados.</p>
+            <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
+        </footer>
+    </section>
+
+    <!-- JS -->
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
