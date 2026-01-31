@@ -1,7 +1,5 @@
 # Portfolio de Kelvin Kauan
 
-![Banner do Portfolio](https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0)
-
 ## 🔥 Sobre o Projeto
 Este é o meu **portfólio pessoal**, desenvolvido com **React, Vite e Tailwind CSS**, projetado para exibir meus **projetos, habilidades técnicas e artigos sobre programação** de forma moderna e interativa.
 
