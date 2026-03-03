@@ -7,33 +7,33 @@ console.log("Blog carregando motion:", !!motion);
 const posts = [
   {
     id: 1,
-    title: "Git na prática: erros que quase todo iniciante comete",
-    excerpt: "Aprenda os principais erros de Git que iniciantes cometem e como corrigi-los rapidamente.",
-    date: "31 Jan 2026",
+    title: "Saí de Python pra Java, e foi mais fácil do que eu imaginava",
+    excerpt: "A prova de que a linguagem é apenas detalhe de sintaxe quando sua base de lógica está fortalecida.",
+    date: "14 Fev 2026",
     readTime: "5 min",
-    category: "Versionamentos",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop",
-    link: "https://www.linkedin.com/posts/kelvinkauan_git-na-pr%C3%A1tica-erros-que-quase-todo-iniciante-activity-7423403955323305984-TEer?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEgKouwBS9EZHX4AOiz4bBZU24fplkLHRcM"
+    category: "Linguagens",
+    image: "https://images.unsplash.com/photo-1649180556628-9ba704115795?q=80&w=1162&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7428495048054509568/"
   },
   {
     id: 2,
-    title: "5 sites que todo programador iniciante PRECISA conhecer!",
-    excerpt: "Sites essenciais para todo programador iniciante acelerar seu aprendizado.",
-    date: "25 Nov 2025",
+    title: "Vale a pena estudar Java em 2026?",
+    excerpt: "Uma análise direta sobre o mercado atual e a relevância da linguagem para este ano.",
+    date: "12 Fev 2026",
     readTime: "5 min",
-    category: "Ferramentas",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop",
-    link: "https://www.linkedin.com/posts/kelvinkauan_tecnologia-desenvolvimentodesoftware-programaaexaeto-activity-7399123253144825856-uXak?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEgKouwBS9EZHX4AOiz4bBZU24fplkLHRcM"
+    category: "Mercado",
+    image: "https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7427739601030610945/"
   },
   {
     id: 3,
-    title: "Engenharia de Software vai muito além da escrita de código!",
-    excerpt: "Arquitetura, boas práticas e soluções inteligentes para sistemas robustos.",
-    date: "28 Abr 2025",
-    readTime: "6 min",
-    category: "Arquitetura",
+    title: "Git na prática: erros que quase todo iniciante comete",
+    excerpt: "Aprenda os principais erros de Git que iniciantes cometem e como corrigi-los rapidamente.",
+    date: "31 Jan 2026",
+    readTime: "4 min",
+    category: "Versionamento",
     image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&auto=format&fit=crop",
-    link: "https://www.linkedin.com/posts/kelvinkauan_descobri-que-engenharia-de-software-n%C3%A3o-%C3%A9-activity-7321338930711224320-EOqK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEgKouwBS9EZHX4AOiz4bBZU24fplkLHRcM"  
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7423403955323305984/"  
   },
 ];
 

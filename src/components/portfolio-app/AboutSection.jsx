@@ -9,12 +9,12 @@ const highlights = [
   {
     icon: Code2,
     title: "Front-end",
-    description: "React, JavaScript, Tailwind CSS",
+    description: "React, JavaScript",
   },
   {
     icon: Server,
     title: "Back-end",
-    description: "Node.js, Python, FastAPI",
+    description: "Java, Spring Boot, Python, FastAPI",
   },
   {
     icon: DatabaseIcon,
@@ -23,7 +23,7 @@ const highlights = [
   },
   {
     icon: Zap,
-    title: "Performance",
+    title: "Git, Docker ",
     description: "Otimização e boas práticas",
   },
 ];
