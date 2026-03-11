@@ -26,26 +26,6 @@ const projects = [
     live: null,
     featured: true,
   },
-  {
-    id: 3,
-    title: "Sistema de Restaurante",
-    description: "Sistema de pedidos de restaurante via terminal em Python. Permite escolher pratos e tamanhos, acumular o valor total e gerar um resumo final formatado.",
-    image: "https://plus.unsplash.com/premium_photo-1661883237884-263e8de8869b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D",
-    technologies: ["Python"],
-    github: "https://github.com/kelvinlemos7/sistema-restaurante",
-    live: null,
-    featured: false,
-  },
-  {
-    id: 4,
-    title: "Locadora de Veículos",
-    description: "Este projeto simula um sistema de locação de veículos utilizando modelagem relacional e comandos SQL.",
-    image: "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    technologies: ["MySQL"],
-    github: "https://github.com/kelvinlemos7/locadora-veiculos",
-    live: null,
-    featured: false,
-  },
 ];
 
 export default function ProjectsSection() {
