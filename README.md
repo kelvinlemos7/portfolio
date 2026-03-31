@@ -8,7 +8,7 @@
 
 ---
 
-# 🗂️ Portfolio (PT-BR)
+# Portfolio (PT-BR)
 
 ## Sobre o Projeto
 
@@ -114,7 +114,7 @@ portfolio-app/
 ---
 ---
 
-# 🗂️ Portfolio (EN)
+# Portfolio (EN)
 
 ## About the Project
 
