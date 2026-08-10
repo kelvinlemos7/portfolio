@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import kelvinFoto from "../../assets/kelvin.jpeg";
+import kelvinFoto from "../../assets/kelvin.jpg";
 import { Code2, Server, DatabaseIcon, Zap } from 'lucide-react';
 
 console.log("About carregando motion:", !!motion);

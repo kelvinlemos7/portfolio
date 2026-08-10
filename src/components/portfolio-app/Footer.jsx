@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import kelvinFoto from "../../assets/kelvin.jpeg";
+import kelvinFoto from "../../assets/kelvin.jpg";
 import { Heart, ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 
 console.log("Footer carregando motion:", !!motion);
