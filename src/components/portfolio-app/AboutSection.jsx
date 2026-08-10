@@ -7,7 +7,7 @@ const highlights = [
   {
     icon: Code2,
     title: "Front-end",
-    description: "React, JavaScript",
+    description: "JavaScript",
   },
   {
     icon: Server,
