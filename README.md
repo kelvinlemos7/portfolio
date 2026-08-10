@@ -66,7 +66,7 @@ O site reúne em um único lugar:
 - Formulário de contato funcional via **Formspree**;
 - Troca de idioma **PT-BR / EN** sem recarregar a página.
 
-> Acesse: <a href="https://kelvinlemosportfolio.vercel.app/">https://kelvinlemosportfolio.vercel.app/</a>
+> Acesse: <a href="https://kelvinlemosportfolio.me/">https://kelvinlemosportfolio.me//</a>
 
 ---
 
@@ -292,7 +292,7 @@ The site brings together in a single page:
 - Working contact form powered by **Formspree**;
 - **PT-BR / EN** language switch without reloading the page.
 
-> Live: <a href="https://kelvinlemosportfolio.vercel.app/">https://kelvinlemosportfolio.vercel.app/</a>
+> Live: <a href="https://kelvinlemosportfolio.me/">https://kelvinlemosportfolio.me/</a>
 
 ---
 
