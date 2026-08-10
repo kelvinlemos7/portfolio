@@ -88,7 +88,7 @@ export default function Footer() {
           className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500"
         >
           <p className="text-sm text-gray-400">
-           © {new Date().getFullYear()} Kelvin Kauan — São Paulo, Brazil.
+           © {new Date().getFullYear()} Kelvin Lemos — São Paulo, Brazil.
           </p>
           
           <nav className="flex items-center gap-6">
