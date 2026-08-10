@@ -46,8 +46,6 @@ export default function SkillsSection() {
             Ferramentas e tecnologias que utilizo para criar soluções incríveis
           </p>
         </motion.div>
-
-        {}
         <div className="hidden md:block relative overflow-hidden">
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0A0A0A] to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0A0A0A] to-transparent z-10" />
@@ -81,22 +79,6 @@ export default function SkillsSection() {
           ))}
         </motion.div>
       </div>
-
-      {}
-      <style>
-        {`
-          @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          .animate-scroll {
-            display: flex;
-            gap: 1.5rem;
-            width: max-content;
-            animation: scroll 25s linear infinite;
-          }
-        `}
-      </style>
     </section>
   );
 }

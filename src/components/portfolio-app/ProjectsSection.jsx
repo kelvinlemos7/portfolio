@@ -3,15 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
-console.log("Projects carregando motion:", !!motion);
-
 const projects = [
   {
     id: 1,
     title: "Bank System API",
     description: "API completa para gerenciar usuários, contas e transações bancárias, com histórico de operações e validações de saldo.",
     image: "https://plus.unsplash.com/premium_photo-1745612945275-fb9774a36236?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    technologies: ["Python", "FaskAPI", "MySQL"],
+    technologies: ["Python", "FastAPI", "MySQL"],
     github: "https://github.com/kelvinlemos7/bank-system",
     live: null,
     featured: true,
@@ -110,17 +108,19 @@ export default function ProjectsSection() {
                       >
                         <Github className="w-5 h-5 text-white" />
                       </motion.a>
-                      <motion.a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ delay: 0.2 }}
-                        className="p-3 rounded-full bg-purple-500 hover:bg-purple-600 transition-colors"
-                      >
-                        <ExternalLink className="w-5 h-5 text-white" />
-                      </motion.a>
+                      {project.live && (
+                        <motion.a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: 0.2 }}
+                          className="p-3 rounded-full bg-purple-500 hover:bg-purple-600 transition-colors"
+                        >
+                          <ExternalLink className="w-5 h-5 text-white" />
+                        </motion.a>
+                      )}
                     </motion.div>
                   )}
                 </AnimatePresence>

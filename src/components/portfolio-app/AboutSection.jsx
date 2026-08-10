@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import kelvinFoto from "../../assets/kelvin.jpg";
 import { Code2, Server, DatabaseIcon, Zap } from 'lucide-react';
 
-console.log("About carregando motion:", !!motion);
-
 const highlights = [
   {
     icon: Code2,

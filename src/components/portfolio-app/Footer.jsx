@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import kelvinFoto from "../../assets/kelvin.jpg";
 import { Heart, ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 
-console.log("Footer carregando motion:", !!motion);
-
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

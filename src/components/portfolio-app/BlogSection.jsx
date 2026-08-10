@@ -2,8 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
-console.log("Blog carregando motion:", !!motion);
-
 const posts = [
   {
     id: 1,
@@ -65,7 +63,9 @@ export default function BlogSection() {
             </h2>
           </div>
           <motion.a
-            href="#"
+            href="https://www.linkedin.com/in/kelvinkauan/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors mt-6 md:mt-0"
             whileHover={{ x: 5 }}
           >
