@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import agillisFoto from "../../assets/agillis.jpeg";
 
 const projects = [
   {
@@ -16,12 +17,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "Payment Processing System",
-    description: "Este projeto é um mini sistema de pagamentos em Java, desenvolvido com foco em Programação Orientada a Objetos (POO) e Engenharia de Software.",
-    image: "https://images.unsplash.com/photo-1608286022625-bc07f7a21154?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    technologies: ["Java"],
-    github: "https://github.com/kelvinlemos7/payment-processing-system",
-    live: null,
+    title: "Agillis",
+    description: "SaaS multi-tenant para barbeiros e salões, com gestão completa do negócio na nuvem.",
+    image: agillisFoto,
+    technologies: ["Java", "Spring Boot", "MySQL", "Docker", "VPS Oracle"],
+    github: null,
+    live: "https://www.agillis.app/login",
     featured: true,
   },
 ];
@@ -97,17 +98,19 @@ export default function ProjectsSection() {
                       exit={{ opacity: 0 }}
                       className="absolute inset-0 bg-purple-900/40 backdrop-blur-sm flex items-center justify-center gap-4"
                     >
-                      <motion.a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ delay: 0.1 }}
-                        className="p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors"
-                      >
-                        <Github className="w-5 h-5 text-white" />
-                      </motion.a>
+                      {project.github && (
+                        <motion.a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: 0.1 }}
+                          className="p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors"
+                        >
+                          <Github className="w-5 h-5 text-white" />
+                        </motion.a>
+                      )}
                       {project.live && (
                         <motion.a
                           href={project.live}
