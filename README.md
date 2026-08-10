@@ -25,6 +25,13 @@
   <br/><br/>
 
   <p align="center">
+    <b><a href="#portfolio-pt-br">Português (PT-BR)</a></b> ·
+    <a href="#portfolio-en">English</a>
+  </p>
+
+  <br/>
+
+  <p align="center">
     <a href="#sobre">Sobre</a> ·
     <a href="#funcionalidades">Funcionalidades</a> ·
     <a href="#tech-stack">Tech Stack</a> ·
@@ -40,6 +47,8 @@
 </div>
 
 ---
+
+<a id="portfolio-pt-br"></a>
 
 # Portfolio - Kelvin Lemos
 
@@ -265,8 +274,234 @@ npm run deploy      # gh-pages -d dist
 
 ---
 
+<a id="portfolio-en"></a>
+
+# Portfolio - Kelvin Lemos (English)
+
+## About
+
+A **dark, modern one-page portfolio** for **Kelvin Lemos** (aka Kelvin Kauan), a **Software Engineer**
+focused on **back-end development**, system architecture and coding best practices.
+
+The site brings together in a single page:
+
+- Personal introduction and availability for new projects;
+- Technical skills (animated marquee on desktop, grid on mobile);
+- Two featured projects with technologies and links (GitHub / live demo);
+- Blog with technical articles published on LinkedIn;
+- Working contact form powered by **Formspree**;
+- **PT-BR / EN** language switch without reloading the page.
+
+> Live: <a href="https://kelvinlemosportfolio.vercel.app/">https://kelvinlemosportfolio.vercel.app/</a>
+
+---
+
+## Features
+
+- **Bilingual (PT-BR / EN)** — toggle in the top-right corner that switches all content instantly, persisted in `localStorage`;
+- **Interactive hero** — radial gradient that follows the mouse (via `requestAnimationFrame`), floating particles and background grid;
+- **Scroll reveal** — section entrance animations with Framer Motion `whileInView`;
+- **Skills marquee** — infinite tech carousel on desktop and animated grid on mobile;
+- **Project cards** — hover zoom, overlay with GitHub and live demo shortcuts;
+- **Integrated blog** — cards with image, category, date, reading time and link to the full article on LinkedIn;
+- **Contact form** — real message delivery via Formspree, with loading, success and error states;
+- **Responsive design** — mobile, tablet and desktop;
+- **Complete footer** — social links, back-to-top and anchor navigation;
+- **Performance** — React 19, optimized Vite chunks, optimized fonts and icons.
+
+---
+
+## Tech Stack
+
+| Technology             | Purpose                                          |
+| ---------------------- | ------------------------------------------------ |
+| **React 19**           | Components, hooks and state                      |
+| **Vite 6**             | Ultra-fast bundler and dev server                |
+| **Tailwind CSS 3**     | Responsive utility-first styling                 |
+| **Framer Motion**      | Smooth animations and transitions                |
+| **Radix UI**           | Accessible primitives (Dialog, Slot, Toggle, ...)|
+| **lucide-react**       | Lightweight, consistent SVG icons                |
+| **clsx / cva / tailwind-merge** | Utility class composition           |
+| **Formspree**          | Contact form message delivery                    |
+| **Vercel**             | Hosting and continuous deployment                |
+| **Git / GitHub**       | Version control and CI/CD                        |
+
+**Skills showcased on the site:** Java, Spring Boot, Python, FastAPI, JavaScript, MySQL, Docker and Git.
+
+---
+
+## i18n
+
+The project ships its own lightweight internationalization system (no external dependencies):
+
+- `src/lib/i18n.js` — dictionary with all `pt` and `en` translations, organized by section;
+- `src/context/LanguageContext.jsx` — `LanguageProvider` + `useLanguage()` hook;
+- Preference persisted in `localStorage` under the `lang` key;
+- `document.documentElement.lang` is updated alongside the language;
+- `t('dotted.key')` helper with automatic fallback to Portuguese.
+
+```js
+const { t, language, setLanguage } = useLanguage();
+return <h1>{t('hero.name')}</h1>;
+```
+
+---
+
+## Project Structure
+
+```
+portfolio/
+├── public/                        # Public assets (favicons)
+├── src/
+│   ├── assets/                    # Images (kelvin.jpg, agillis.jpeg)
+│   ├── components/
+│   │   ├── LanguageToggle.jsx     # PT/EN toggle
+│   │   ├── portfolio-app/         # Page sections
+│   │   │   ├── HeroSection.jsx    # Home + interactive hero
+│   │   │   ├── AboutSection.jsx   # About me
+│   │   │   ├── SkillsSection.jsx  # Skills (marquee)
+│   │   │   ├── ProjectsSection.jsx# Featured projects
+│   │   │   ├── BlogSection.jsx    # Recent articles
+│   │   │   ├── ContactSection.jsx # Form + socials
+│   │   │   └── Footer.jsx         # Footer
+│   │   └── ui/                    # shadcn/ui-style primitives
+│   │       ├── button.jsx
+│   │       ├── input.jsx
+│   │       ├── textarea.jsx
+│   │       └── ...                # Radix UI + Tailwind
+│   ├── context/
+│   │   └── LanguageContext.jsx    # Language provider + hook
+│   ├── hooks/
+│   │   └── use-mobile.jsx         # Mobile device detection
+│   ├── lib/
+│   │   ├── i18n.js                # Translation dictionary
+│   │   └── utils.js               # cn() (clsx + tailwind-merge)
+│   ├── utils/
+│   │   └── index.ts
+│   ├── App.jsx                    # Root component
+│   ├── main.jsx                   # App entry point
+│   ├── index.css                  # Global styles
+│   └── App.css
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js                 # Alias @ -> ./src + base per mode
+└── eslint.config.js
+```
+
+---
+
+## Sections
+
+### Hero
+- "Available for new projects" badge;
+- Gradient name and role (Software Engineer);
+- CTAs: "See my projects" and "Get in touch";
+- Mouse-following gradient background, particles and grid;
+- Animated scroll indicator.
+
+### About
+- Personal text about back-end, architecture and continuous growth;
+- Highlights: Front-end, Back-end, Database, Git & Docker;
+- "Back-end focused" and "APIs & systems" badges.
+
+### Skills
+- Infinite marquee with technology icons (desktop);
+- Animated card grid (mobile).
+
+### Projects
+
+| Project            | Technologies                    | Links                            |
+| ------------------ | ------------------------------- | -------------------------------- |
+| **Bank System API**| Python, FastAPI, MySQL          | [GitHub](https://github.com/kelvinlemos7/bank-system) |
+| **Agillis**        | Java, Spring Boot, MySQL, Docker, VPS Oracle | [Live](https://www.agillis.app/login) |
+
+- "View all projects" button points to the GitHub repositories.
+
+### Blog
+Real technical articles published on LinkedIn, with date, reading time and category:
+
+- **Moving from Python to Java was easier than I expected** — Languages;
+- **Is it worth studying Java in 2026?** — Market;
+- **Git in practice: mistakes almost every beginner makes** — Version control.
+
+### Contact
+- Working form (Formspree) with validation and visual feedback;
+- Location: São Paulo, Brazil — available for remote work;
+- Links to GitHub, LinkedIn and email;
+- Animated availability badge.
+
+---
+
+## Getting Started
+
+Requirements: **Node.js 18+** and **npm**.
+
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Start dev server (http://localhost:5173)
+npm run dev
+
+# 3. Production build
+npm run build
+
+# 4. Preview the build
+npm run preview
+
+# 5. Lint
+npm run lint
+```
+
+---
+
+## Deployment
+
+### Vercel (current)
+The project is hosted on Vercel with automatic deployments from the `main` branch.
+
+```
+https://kelvinlemosportfolio.vercel.app/
+```
+
+### GitHub Pages (alternative)
+Ready-to-use scripts are also included for GitHub Pages:
+
+```bash
+npm run predeploy   # vite build --mode github  (base /portfolio/)
+npm run deploy      # gh-pages -d dist
+```
+
+---
+
+## Roadmap
+
+- [x] Bilingual site (PT-BR / EN)
+- [x] Working contact form
+- [x] Skills marquee
+- [x] Vercel deployment
+- [ ] Fixed navbar with navigation menu
+- [ ] Dark/light mode
+- [ ] Per-project detail pages
+- [ ] SEO + Open Graph
+- [ ] More projects and articles
+
+---
+
+## Author
+
+**Kelvin Lemos (Kelvin Kauan)** — Software Engineer in training, focused on back-end, modern web development and coding best practices.
+
+[![GitHub](https://img.shields.io/badge/GitHub-kelvinlemos7-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kelvinlemos7)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-kelvinkauan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kelvinkauan/)
+[![E-mail](https://img.shields.io/badge/E--mail-kelvinkauan17%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kelvinkauan17@gmail.com)
+
+---
+
 <div align="center">
 
-Feito com React, Vite, Tailwind CSS e muita dedicação.
+Built with React, Vite, Tailwind CSS and a lot of dedication.
 
 </div>
