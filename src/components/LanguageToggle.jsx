@@ -6,7 +6,7 @@ export default function LanguageToggle() {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="fixed top-8 right-[4.5rem] sm:top-4 sm:right-4 z-50 flex items-center gap-1 p-1 rounded-full bg-white/[0.03] border border-white/[0.1] backdrop-blur-sm whitespace-nowrap">
+    <div className="fixed top-8 right-[4.5rem] sm:top-4 sm:right-4 z-50 flex items-center gap-1 p-1 rounded-full bg-[#0F0F0F]/95 sm:bg-white/[0.03] border border-white/[0.1] backdrop-blur-none sm:backdrop-blur-sm whitespace-nowrap">
       <Globe className="w-4 h-4 text-gray-400 ml-2" />
       {['pt', 'en'].map((lang) => (
         <button
