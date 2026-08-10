@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext.jsx';
 
 const skills = [
   { name: 'Java', color: '#4479A1', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
@@ -17,6 +18,7 @@ const skills = [
 const duplicatedSkills = [...skills, ...skills];
 
 export default function SkillsSection() {
+  const { t } = useLanguage();
   return (
     <section id="skills" className="relative py-32 bg-[#0A0A0A] overflow-hidden">
       {/* Background decoration */}
@@ -33,16 +35,16 @@ export default function SkillsSection() {
           className="text-center mb-20"
         >
           <span className="text-purple-400 text-sm font-medium uppercase tracking-widest mb-4 block">
-            Habilidades
+            {t('skills.eyebrow')}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Tecnologias que{' '}
+            {t('skills.title1')}
             <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
-              domino
+              {t('skills.title2')}
             </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Ferramentas e tecnologias que utilizo para criar soluções incríveis
+            {t('skills.subtitle')}
           </p>
         </motion.div>
         <div className="hidden md:block relative overflow-hidden">

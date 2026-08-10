@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext.jsx';
 
 const posts = [
   {
@@ -37,6 +38,7 @@ const posts = [
 
 
 export default function BlogSection() {
+  const { t } = useLanguage();
   return (
     <section id="blog" className="relative py-32 bg-[#0A0A0A]">
       {/* Background accent */}
@@ -53,12 +55,12 @@ export default function BlogSection() {
         >
           <div>
             <span className="text-purple-400 text-sm font-medium uppercase tracking-widest mb-4 block">
-              Blog
+              {t('blog.eyebrow')}
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Artigos{' '}
+              {t('blog.title1')}
               <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
-                recentes
+                {t('blog.title2')}
               </span>
             </h2>
           </div>
@@ -69,7 +71,7 @@ export default function BlogSection() {
             className="group flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors mt-6 md:mt-0"
             whileHover={{ x: 5 }}
           >
-            Ver todos os artigos
+            {t('blog.viewAll')}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </motion.a>
         </motion.div>
@@ -133,7 +135,7 @@ export default function BlogSection() {
 
                 {/* Read more link */}
                 <span className="inline-flex items-center gap-2 text-sm text-purple-400 group-hover:text-purple-300 transition-colors">
-                  Ler artigo
+                  {t('blog.readMore')}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>

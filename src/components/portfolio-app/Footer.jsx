@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import kelvinFoto from "../../assets/kelvin.jpg";
 import { Heart, ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext.jsx';
 
 export default function Footer() {
+  const { t } = useLanguage();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -30,8 +32,8 @@ export default function Footer() {
               />
             </div>
             <div>
-              <span className="text-white font-semibold block">Kelvin Lemos</span>
-              <span className="text-gray-500 text-sm">Engenheiro de Software</span>
+              <span className="text-white font-semibold block">{t('footer.brand')}</span>
+              <span className="text-gray-500 text-sm">{t('footer.role')}</span>
             </div>
           </motion.div>
 
@@ -72,7 +74,7 @@ export default function Footer() {
             className="flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 hover:bg-purple-500/20 transition-all duration-300"
           >
             <ArrowUp className="w-4 h-4" />
-            <span className="text-sm font-medium">Voltar ao topo</span>
+            <span className="text-sm font-medium">{t('footer.backToTop')}</span>
           </motion.button>
         </div>
 
@@ -88,14 +90,14 @@ export default function Footer() {
           className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500"
         >
           <p className="text-sm text-gray-400">
-           © {new Date().getFullYear()} Kelvin Lemos — São Paulo, Brazil.
+           © {new Date().getFullYear()} {t('footer.brand')} — {t('footer.copyright')}.
           </p>
           
           <nav className="flex items-center gap-6">
-            <a href="#sobre" className="hover:text-purple-400 transition-colors">Sobre</a>
-            <a href="#projetos" className="hover:text-purple-400 transition-colors">Projetos</a>
-            <a href="#blog" className="hover:text-purple-400 transition-colors">Blog</a>
-            <a href="#contato" className="hover:text-purple-400 transition-colors">Contato</a>
+            <a href="#sobre" className="hover:text-purple-400 transition-colors">{t('footer.nav.sobre')}</a>
+            <a href="#projetos" className="hover:text-purple-400 transition-colors">{t('footer.nav.projetos')}</a>
+            <a href="#blog" className="hover:text-purple-400 transition-colors">{t('footer.nav.blog')}</a>
+            <a href="#contato" className="hover:text-purple-400 transition-colors">{t('footer.nav.contato')}</a>
           </nav>
         </motion.div>
       </div>

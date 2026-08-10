@@ -3,12 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import agillisFoto from "../../assets/agillis.jpeg";
+import { useLanguage } from '../../context/LanguageContext.jsx';
 
 const projects = [
   {
     id: 1,
     title: "Bank System API",
-    description: "API completa para gerenciar usuários, contas e transações bancárias, com histórico de operações e validações de saldo.",
+    descKey: "projects.bank.desc",
     image: "https://plus.unsplash.com/premium_photo-1745612945275-fb9774a36236?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     technologies: ["Python", "FastAPI", "MySQL"],
     github: "https://github.com/kelvinlemos7/bank-system",
@@ -18,7 +19,7 @@ const projects = [
   {
     id: 2,
     title: "Agillis",
-    description: "SaaS multi-tenant para barbeiros e salões, com gestão completa do negócio na nuvem.",
+    descKey: "projects.agillis.desc",
     image: agillisFoto,
     technologies: ["Java", "Spring Boot", "MySQL", "Docker", "VPS Oracle"],
     github: null,
@@ -28,6 +29,7 @@ const projects = [
 ];
 
 export default function ProjectsSection() {
+  const { t } = useLanguage();
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
@@ -48,16 +50,16 @@ export default function ProjectsSection() {
           className="text-center mb-20"
         >
           <span className="text-purple-400 text-sm font-medium uppercase tracking-widest mb-4 block">
-            Portfólio
+            {t('projects.eyebrow')}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Projetos{' '}
+            {t('projects.title1')}
             <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
-              em destaque
+              {t('projects.title2')}
             </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Uma seleção dos meus trabalhos mais recentes e impactantes
+            {t('projects.subtitle')}
           </p>
         </motion.div>
 
@@ -139,7 +141,7 @@ export default function ProjectsSection() {
                 </div>
                 
                 <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                  {project.description}
+                  {t(project.descKey)}
                 </p>
 
                 {/* Technologies */}
@@ -175,9 +177,8 @@ export default function ProjectsSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Ver todos os projetos
-        <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-          </a>
+          {t('projects.viewAll')}
+        <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />          </a>
         </Button>
         </motion.div>
       </div>

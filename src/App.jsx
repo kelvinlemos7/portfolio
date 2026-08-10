@@ -6,6 +6,7 @@ import ProjectsSection from './components/portfolio-app/ProjectsSection.jsx';
 import BlogSection from './components/portfolio-app/BlogSection.jsx';
 import ContactSection from './components/portfolio-app/ContactSection.jsx';
 import Footer from './components/portfolio-app/Footer.jsx';
+import LanguageToggle from './components/LanguageToggle.jsx';
 
 export default function Home() {
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function Home() {
 
   return (
     <div className="bg-[#0A0A0A] min-h-screen">
+      <LanguageToggle />
       <HeroSection />
       <AboutSection />
       <SkillsSection />

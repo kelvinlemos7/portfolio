@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Sparkles } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { useLanguage } from '../../context/LanguageContext.jsx';
 
 export default function HeroSection() {
+  const { t } = useLanguage();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -97,7 +99,7 @@ export default function HeroSection() {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm text-purple-300 font-medium">Disponível para novos projetos</span>
+            <span className="text-sm text-purple-300 font-medium">{t('hero.badge')}</span>
           </motion.div>
 
           <motion.h1 
@@ -106,9 +108,9 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <span className="text-white">Olá, eu sou </span>
+            <span className="text-white">{t('hero.greeting')}</span>
             <span className="bg-gradient-to-r from-purple-400 via-violet-400 to-purple-500 bg-clip-text text-transparent">
-              Kelvin Lemos
+              {t('hero.name')}
             </span>
           </motion.h1>
 
@@ -118,7 +120,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Engenheiro de Software
+            {t('hero.role')}
           </motion.p>
 
           <motion.p 
@@ -127,7 +129,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Focado em desenvolvimento sólido e escalável, com atenção a boas práticas e performance.
+            {t('hero.tagline')}
           </motion.p>
 
           <motion.div
@@ -140,7 +142,7 @@ export default function HeroSection() {
               onClick={scrollToProjects}
               className="group relative px-8 py-6 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 text-white font-medium rounded-full transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105"
             >
-              <span className="relative z-10">Ver meus projetos</span>
+              <span className="relative z-10">{t('hero.ctaProjects')}</span>
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-violet-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </Button>
 
@@ -149,9 +151,8 @@ export default function HeroSection() {
               onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-6 border-purple-500/30 text-purple-300 hover:bg-purple-500/10 hover:border-purple-500/50 rounded-full transition-all duration-300 hover:scale-105"
             >
-              Entre em contato
-            </Button>
-          </motion.div>
+              {t('hero.ctaContact')}
+            </Button>          </motion.div>
         </motion.div>
       </div>
 
@@ -168,7 +169,7 @@ export default function HeroSection() {
           className="flex flex-col items-center gap-2 cursor-pointer"
           onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          <span className="text-xs text-gray-500 uppercase tracking-widest">Scroll</span>
+          <span className="text-xs text-gray-500 uppercase tracking-widest">{t('hero.scroll')}</span>
           <ChevronDown className="w-5 h-5 text-purple-400" />
         </motion.div>
       </motion.div>

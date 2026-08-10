@@ -4,29 +4,31 @@ import { Send, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useLanguage } from "../../context/LanguageContext.jsx";
 
 const socialLinks = [
   {
     icon: Github,
-    label: "GitHub",
+    labelKey: "GitHub",
     href: "https://github.com/kelvinlemos7",
     username: "@kelvinlemos7",
   },
   {
     icon: Linkedin,
-    label: "LinkedIn",
+    labelKey: "LinkedIn",
     href: "https://www.linkedin.com/in/kelvinkauan/",
     username: "/in/kelvinkauan",
   },
   {
     icon: Mail,
-    label: "Email",
+    labelKey: "contact.emailLabel",
     href: "mailto:kelvinkauan17@gmail.com",
     username: "kelvinkauan17@gmail.com",
   },
 ];
 
 export default function ContactSection() {
+  const { t } = useLanguage();
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null); // success | error | null
 
@@ -76,18 +78,18 @@ export default function ContactSection() {
           className="text-center mb-16"
         >
           <span className="text-purple-400 text-sm font-medium uppercase tracking-widest mb-4 block">
-            Contato
+            {t('contact.eyebrow')}
           </span>
 
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Vamos{" "}
+            {t('contact.title1')}
             <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
-              conversar?
+              {t('contact.title2')}
             </span>
           </h2>
 
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Me conte sobre sua ideia ou projeto. Eu respondo rápido.
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
@@ -103,38 +105,38 @@ export default function ContactSection() {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Nome
+                    {t('contact.name')}
                   </label>
                   <Input
                     name="name"
                     required
-                    placeholder="Seu nome"
+                    placeholder={t('contact.namePlaceholder')}
                     className="bg-white/[0.03] border-white/[0.1] text-white placeholder:text-gray-500 h-12 rounded-xl"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    E-mail
+                    {t('contact.email')}
                   </label>
                   <Input
                     type="email"
                     name="email"
                     required
-                    placeholder="seu@email.com"
+                    placeholder={t('contact.emailPlaceholder')}
                     className="bg-white/[0.03] border-white/[0.1] text-white placeholder:text-gray-500 h-12 rounded-xl"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Mensagem
+                    {t('contact.message')}
                   </label>
                   <Textarea
                     name="message"
                     required
                     rows={5}
-                    placeholder="Conte-me sobre seu projeto..."
+                    placeholder={t('contact.messagePlaceholder')}
                     className="bg-white/[0.03] border-white/[0.1] text-white placeholder:text-gray-500 rounded-xl resize-none"
                   />
                 </div>
@@ -146,18 +148,18 @@ export default function ContactSection() {
                 className="w-full h-14 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 text-white font-medium rounded-xl transition-all duration-300 shadow-lg shadow-purple-500/25"
               >
                 <Send className="w-5 h-5 mr-2" />
-                {loading ? "Enviando..." : "Enviar mensagem"}
+                {loading ? t('contact.sending') : t('contact.send')}
               </Button>
 
               {status === "success" && (
                 <p className="text-green-400 text-sm">
-                  Mensagem enviada com sucesso 🚀
+                  {t('contact.success')}
                 </p>
               )}
 
               {status === "error" && (
                 <p className="text-red-400 text-sm">
-                  Erro ao enviar. Tente novamente.
+                  {t('contact.error')}
                 </p>
               )}
             </form>
@@ -175,22 +177,22 @@ export default function ContactSection() {
             <div className="mb-10">
               <div className="flex items-center gap-3 text-gray-400 mb-2">
                 <MapPin className="w-5 h-5 text-purple-400" />
-                <span>São Paulo, Brasil</span>
+                <span>{t('contact.location')}</span>
               </div>
               <p className="text-gray-500 text-sm ml-8">
-                Disponível para trabalho remoto
+                {t('contact.remote')}
               </p>
             </div>
 
             {/* Social */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white mb-6">
-                Me encontre em
+                {t('contact.findMe')}
               </h3>
 
               {socialLinks.map((social) => (
                 <motion.a
-                  key={social.label}
+                  key={social.labelKey}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -202,7 +204,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <span className="block text-white font-medium">
-                      {social.label}
+                      {t(social.labelKey)}
                     </span>
                     <span className="text-sm text-gray-500">
                       {social.username}
@@ -219,7 +221,7 @@ export default function ContactSection() {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
               </span>
               <span className="text-green-400 font-medium">
-                Disponível para novos projetos
+                {t('contact.available')}
               </span>
             </div>
           </motion.div>

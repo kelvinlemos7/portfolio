@@ -2,31 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import kelvinFoto from "../../assets/kelvin.jpg";
 import { Code2, Server, DatabaseIcon, Zap } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext.jsx';
 
 const highlights = [
-  {
-    icon: Code2,
-    title: "Front-end",
-    description: "JavaScript",
-  },
-  {
-    icon: Server,
-    title: "Back-end",
-    description: "Java, Spring Boot, Python, FastAPI",
-  },
-  {
-    icon: DatabaseIcon,
-    title: "Database",
-    description: "MySQL · integração com APIs e back-end",
-  },
-  {
-    icon: Zap,
-    title: "Git, Docker ",
-    description: "Otimização e boas práticas",
-  },
+  { icon: Code2, titleKey: 'about.h0.title', descKey: 'about.h0.desc' },
+  { icon: Server, titleKey: 'about.h1.title', descKey: 'about.h1.desc' },
+  { icon: DatabaseIcon, titleKey: 'about.h2.title', descKey: 'about.h2.desc' },
+  { icon: Zap, titleKey: 'about.h3.title', descKey: 'about.h3.desc' },
 ];
 
 export default function AboutSection() {
+  const { t } = useLanguage();
   return (
     <section id="sobre" className="relative py-32 bg-[#0A0A0A]">
       {/* Subtle gradient */}
@@ -86,7 +72,7 @@ export default function AboutSection() {
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
-                <span className="text-sm text-purple-300">Back-end focused</span>
+                <span className="text-sm text-purple-300">{t('about.badge1')}</span>
               </motion.div>
 
               <motion.div
@@ -94,7 +80,7 @@ export default function AboutSection() {
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 1 }}
               >
-                <span className="text-sm text-violet-300">APIs & sistemas</span>
+                <span className="text-sm text-violet-300">{t('about.badge2')}</span>
               </motion.div>
             </div>
           </motion.div>
@@ -107,24 +93,22 @@ export default function AboutSection() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-purple-400 text-sm font-medium uppercase tracking-widest mb-4 block">
-              Sobre mim
+              {t('about.eyebrow')}
             </span>
 
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Transformando ideias em{" "}
+              {t('about.title1')}
               <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
-                sistemas eficientes
+                {t('about.title2')}
               </span>
             </h2>
 
             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                Estudante de Engenharia de Software, interessado em back-end, arquitetura de sistemas
-                e no impacto que boas decisões técnicas geram a longo prazo.
+                {t('about.p1')}
             </p>
 
             <p className="text-gray-500 leading-relaxed mb-10">
-                Busco evoluir com consistência, construir uma base sólida e transformar aprendizado
-                em soluções reais.
+                {t('about.p2')}
             </p>
 
             {/* Highlights */}
@@ -139,8 +123,8 @@ export default function AboutSection() {
                   className="group p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-purple-500/30 hover:bg-purple-500/5 transition-all duration-300"
                 >
                   <item.icon className="w-6 h-6 text-purple-400 mb-3 group-hover:scale-110 transition-transform duration-300" />
-                  <h3 className="text-white font-medium mb-1">{item.title}</h3>
-                  <p className="text-gray-500 text-sm">{item.description}</p>
+                  <h3 className="text-white font-medium mb-1">{t(item.titleKey)}</h3>
+                  <p className="text-gray-500 text-sm">{t(item.descKey)}</p>
                 </motion.div>
               ))}
             </div>
