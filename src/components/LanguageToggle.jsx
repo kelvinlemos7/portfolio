@@ -6,13 +6,13 @@ export default function LanguageToggle() {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="fixed top-3 right-3 sm:top-4 sm:right-4 z-50 flex items-center gap-0.5 sm:gap-1 p-0.5 sm:p-1 rounded-full bg-white/[0.03] border border-white/[0.1] backdrop-blur-sm whitespace-nowrap">
-      <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 ml-1.5 sm:ml-2" />
+    <div className="fixed top-4 right-4 z-50 flex items-center gap-1 p-1 rounded-full bg-white/[0.03] border border-white/[0.1] backdrop-blur-sm whitespace-nowrap">
+      <Globe className="w-4 h-4 text-gray-400 ml-2" />
       {['pt', 'en'].map((lang) => (
         <button
           key={lang}
           onClick={() => setLanguage(lang)}
-          className={`px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-semibold uppercase rounded-full transition-all duration-300 cursor-pointer ${
+          className={`px-3 py-1 text-xs font-semibold uppercase rounded-full transition-all duration-300 cursor-pointer ${
             language === lang
               ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/30'
               : 'text-gray-400 hover:text-purple-300'
