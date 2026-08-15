@@ -135,7 +135,7 @@ portfolio/
 │   │   │   ├── AboutSection.jsx   # Sobre mim
 │   │   │   ├── SkillsSection.jsx  # Habilidades (marquee)
 │   │   │   ├── ProjectsSection.jsx# Projetos em destaque
-│   │   │   ├── BlogSection.jsx    # Artigos recentes
+│   │   │   ├── BlogSection.jsx    # Artigos em destaque
 │   │   │   ├── ContactSection.jsx # Formulário + redes
 │   │   │   └── Footer.jsx         # Rodapé
 │   │   └── ui/                    # Primitivas estilo shadcn/ui
@@ -361,7 +361,7 @@ portfolio/
 │   │   │   ├── AboutSection.jsx   # About me
 │   │   │   ├── SkillsSection.jsx  # Skills (marquee)
 │   │   │   ├── ProjectsSection.jsx# Featured projects
-│   │   │   ├── BlogSection.jsx    # Recent articles
+│   │   │   ├── BlogSection.jsx    # Featured articles
 │   │   │   ├── ContactSection.jsx # Form + socials
 │   │   │   └── Footer.jsx         # Footer
 │   │   └── ui/                    # shadcn/ui-style primitives

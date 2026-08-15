@@ -46,7 +46,7 @@ export const translations = {
     blog: {
       eyebrow: "Blog",
       title1: "Artigos ",
-      title2: "recentes",
+      title2: "em destaque",
       viewAll: "Ver todos os artigos",
       readMore: "Ler artigo",
     },
@@ -126,7 +126,7 @@ export const translations = {
     },
     blog: {
       eyebrow: "Blog",
-      title1: "Recent ",
+      title1: "Featured ",
       title2: "articles",
       viewAll: "View all articles",
       readMore: "Read article",
